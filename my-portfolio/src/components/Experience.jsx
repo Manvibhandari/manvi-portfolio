@@ -6,56 +6,123 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="w-full min-h-screen text-white px-6 md:px-12 pb-24 mt-50 scroll-mt-[100px] bg-transparent"
+      className="w-full scroll-mt-[100px] bg-transparent px-5 pb-12 pt-10 text-white sm:px-6 sm:pt-12 md:px-12 md:pt-14"
     >
-      <div className="max-w-7xl mx-auto ml-10">
-        <div className="flex items-center gap-2 mb-12">
+      {/* EXPERIENCE CONTENT */}
+      <div className="mx-auto w-full max-w-7xl md:pl-8 lg:pl-12">
+        {/* SECTION HEADING — MATCHES MY SKILLS */}
+        <div className="mb-10 flex items-center gap-3 sm:mb-12">
           <motion.span
             animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
+            transition={{
+              repeat: Infinity,
+              duration: 4,
+              ease: "linear",
+            }}
+            className="inline-flex shrink-0"
           >
-            <TbAsterisk className="text-gray-400 text-xl md:text-2xl lg:text-3xl" />
+            <TbAsterisk
+              aria-hidden="true"
+              className="text-2xl text-green-400 sm:text-3xl"
+            />
           </motion.span>
-          <h1 className="text-[12px] md:text-[18px] lg:text-[18px] font-anton text-white">
-            MY EXPERIENCE
-          </h1>
+
+          <p className="text-sm uppercase tracking-[0.2em] text-gray-300 sm:text-base">
+            My Experience
+          </p>
         </div>
 
-        {/* Experience Entry */}
-        <div className="flex flex-col space-y-14">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="space-y-4"
-          >
-            <p className="text-lg md:text-xl text-white">Luminaries</p>
-            <h2 className="text-3xl md:text-5xl font-anton text-gray-100">
-              Freelancer (Frontend Developer)
-            </h2>
-            <p className="text-sm text-gray-400">April 2025 – June 2025</p>
+        {/* EXPERIENCE CARD */}
+        <motion.article
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.15 }}
+          className="group relative rounded-2xl border border-transparent p-4 transition-all duration-300 ease-out hover:border-green-400/50 hover:bg-green-400/[0.03] hover:shadow-[0_0_25px_rgba(74,222,128,0.14)] sm:p-6 md:p-8"
+        >
+          {/* SUBTLE GREEN GLOW */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            style={{
+              boxShadow: "inset 0 0 20px rgba(74, 222, 128, 0.04)",
+            }}
+          />
 
-            {/* Contributions */}
-            <div className="mt-4 space-y-2 text-gray-300 text-sm md:text-base leading-relaxed max-w-3xl">
-              <p className="font-semibold text-white">What I did:</p>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Developed a fully responsive UI for a mental wellness startup using React.js and Tailwind CSS.</li>
-                <li>Integrated smooth, engaging animations with Framer Motion to improve user interaction and experience.</li>
-                <li>Worked closely with the backend developer to implement seamless API integrations.</li>
-                <li>Successfully delivered the project within a tight 6-week deadline, ensuring quality and performance.</li>
-              </ul>
+          <div className="relative">
+            {/* ROLE AND COMPANY */}
+            <div className="mb-6">
+              <p className="mb-2 text-sm font-medium tracking-wide text-green-400 transition-colors duration-300 group-hover:text-green-300 sm:text-base">
+                Luminaries · Remote
+              </p>
 
-              <p className="pt-3 font-semibold text-white">Tools & Technologies:</p>
-              <ul className="flex flex-wrap gap-3 text-sm text-gray-400">
-                <li className="bg-gray-800 px-3 py-1 rounded-full">React</li>
-                <li className="bg-gray-800 px-3 py-1 rounded-full">Tailwind CSS</li>
-                <li className="bg-gray-800 px-3 py-1 rounded-full">Framer Motion</li>
-                <li className="bg-gray-800 px-3 py-1 rounded-full">Git</li>
-              </ul>
+              <h3 className="text-2xl font-semibold leading-tight text-gray-100 transition-colors duration-300 group-hover:text-green-300 sm:text-3xl md:text-4xl lg:text-5xl">
+                Freelance Frontend Developer
+              </h3>
+
+              <p className="mt-3 text-sm text-gray-400 sm:text-base">
+                March 2026 – May 2026
+              </p>
             </div>
-          </motion.div>
-        </div>
+
+            {/* CONTRIBUTIONS */}
+            <div className="max-w-4xl space-y-5 text-sm leading-relaxed text-gray-300 sm:text-base">
+              <div>
+                <h4 className="mb-3 font-semibold text-white transition-colors duration-300 group-hover:text-green-300">
+                  What I did
+                </h4>
+
+                <ul className="list-disc space-y-2 pl-5 marker:text-green-400">
+                  <li>
+                    Developed the complete web frontend using React.js 
+                    and Tailwind CSS, delivering responsive and user-friendly interfaces.
+                  </li>
+
+                  <li>
+                    Built interactive dashboards and UI components 
+                    for student management, faculty management, attendance, 
+                    assessments, billing, and academic resources.
+                  </li>
+
+                  <li>
+                    Built responsive frontend interfaces and
+                     streamlined administrative workflows, reducing manual administrative workload by 55%.
+                  </li>
+
+                  <li>
+                    Integrated frontend components with backend APIs 
+                    and implemented reusable UI components to ensure seamless data flow and a consistent user experience.
+                  </li>
+                </ul>
+              </div>
+
+              {/* TECHNOLOGIES */}
+              <div>
+                <h4 className="mb-3 font-semibold text-white transition-colors duration-300 group-hover:text-green-300">
+                  Tools & Technologies
+                </h4>
+
+                <ul className="flex flex-wrap gap-2 sm:gap-3">
+                  {[
+                    "React.js",
+                    "JavaScript",
+                    "Tailwind CSS",
+                    "Responsive Design",
+                    "Reusable Components",
+                    "Git",
+                  ].map((technology) => (
+                    <li
+                      key={technology}
+                      className="rounded-full border border-gray-700 bg-gray-800/80 px-3 py-1.5 text-xs text-gray-300 transition-all duration-300 hover:border-green-400/60 hover:bg-green-400/10 hover:text-green-300 sm:text-sm"
+                    >
+                      {technology}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </motion.article>
       </div>
     </section>
   );

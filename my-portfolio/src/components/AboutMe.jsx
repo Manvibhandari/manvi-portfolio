@@ -1,110 +1,52 @@
 import React from "react";
-import { motion } from "framer-motion";
-import {
-  FaJs,
-  FaReact,
-  FaSass,
-  FaBootstrap,
-  FaHtml5,
-  FaCss3Alt,
-  FaGitAlt,
-} from "react-icons/fa";
-import {
-  SiTypescript,
-  SiNextdotjs,
-  SiRedux,
-  SiTailwindcss,
-  SiGreensock,
-  SiFramer,
-  SiVite,
-} from "react-icons/si";
-import { TbAsterisk } from "react-icons/tb";
 
 export default function AboutMe() {
   return (
     <section
       id="about"
-      className="w-full min-h-screen text-white px-6 md:px-12 pt-2 pb-24 scroll-mt-[100px] bg-transparent"
+      className="min-h-screen w-full scroll-mt-[100px] bg-transparent px-5 pt-2 pb-16 text-white sm:px-8 sm:pb-20 md:px-12 md:pb-24"
     >
-      <div className="max-w-7xl mx-auto ml-10">
-        {/* Main Statement */}
-        <p className="text-[40px] md:text-[50px] lg:text-[56px] font-light leading-snug tracking-tight text-white">
-          I believe in a user-centered design approach, ensuring that every project I work on is tailored to meet the specific needs of its users.
-        </p>
-
-        {/* ABOUT ME SECTION */}
-        <div className="mt-20">
-          <p className="text-sm text-gray-400 uppercase tracking-widest mb-3">This is me.</p>
-          <hr className="border-gray-600 mb-8" />
-
-          <div className="flex flex-col md:flex-row justify-between gap-8 md:items-start">
-            <h2 className="text-5xl font-anton text-white whitespace-nowrap min-w-[180px]">
-              Hi, I'm Manvi.
-            </h2>
-            <div className="text-gray-400 max-w-2xl leading-relaxed text-base md:text-lg space-y-4">
-              <p>
-                I'm a frontend web developer dedicated to turning ideas into creative solutions.
-                I specialize in creating seamless and intuitive user experiences.
-              </p>
-              <p>
-                My approach focuses on creating scalable, high-performing solutions tailored to both user needs and business objectives.
-                By prioritizing performance, accessibility, and responsiveness, I strive to deliver experiences that not only engage users but also drive tangible results.
-              </p>
-            </div>
-          </div>
+      <div className="mx-auto w-full max-w-none">
+        {/* MAIN STATEMENT */}
+        <div className="w-full pl-3 sm:pl-5 md:pl-8 lg:pl-10">
+          <p className="text-[28px] font-light leading-snug tracking-tight text-white sm:text-[36px] md:text-[50px] lg:text-[56px]">
+            I believe great software combines thoughtful design with practical functionality.
+             I focus on creating intuitive, responsive, and accessible interfaces that deliver seamless user experiences.
+          </p>
         </div>
 
-        {/* STACK SECTION */}
-        <div className="mt-60">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-12">
-            <div className="flex flex-col space-y-2 mt-[-40px]">
-              <div className="flex items-center gap-2">
-                
-                <motion.span
-                  animate={{ rotate: 360 }}
-                  transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
-                >
-                  <TbAsterisk className="text-gray-400 text-xl md:text-2xl lg:text-3xl" />
-                </motion.span>
-                <h1 className="text-[12px] md:text-[18px] lg:text-[18px] font-anton text-white">
-                  MY STACK
-                </h1>
-              </div>
-              <h2 className="text-[22px] md:text-[32px] lg:text-[36px] font-anton text-gray-400 tracking-wider">
-                FRONTEND
+        {/* ABOUT ME SECTION */}
+        <div className="mt-16 sm:mt-20 md:mt-20">
+          {/* SECTION LABEL */}
+          <div className="pl-3 sm:pl-5 md:pl-8 lg:pl-10">
+            <p className="mb-3 text-sm uppercase tracking-widest text-gray-400">
+              This is me.
+            </p>
+
+            <hr className="mb-8 border-gray-600" />
+          </div>
+
+          {/* NAME AND INTRODUCTION */}
+          <div className="grid grid-cols-1 items-start gap-6 pl-3 sm:pl-5 md:grid-cols-[0.8fr_1.2fr] md:gap-8 md:pl-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12 lg:pl-10">
+            {/* LEFT SIDE: NAME */}
+            <div>
+              <h2 className="w-fit max-w-full text-3xl font-anton leading-tight text-white sm:text-4xl md:text-[40px] lg:text-[44px]">
+                Hi, I'm Manvi.
               </h2>
             </div>
 
-            {/* RIGHT SIDE */}
-            <div className="pr-8 md:pr-20 lg:pr-28 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-6 text-white text-left">
-              
-              <div className="flex items-center gap-2 text-base">
-                <FaHtml5 className="text-orange-500 text-4xl md:text-5xl" /> HTML5
-              </div>
-              <div className="flex items-center gap-2 text-base">
-                <FaCss3Alt className="text-blue-500 text-4xl md:text-5xl" /> CSS3
-              </div>
-              <div className="flex items-center gap-2 text-base">
-                <FaJs className="text-yellow-400 text-4xl md:text-5xl" /> JavaScript
-              </div>
-              <div className="flex items-center gap-2 text-base">
-                <FaReact className="text-cyan-400 text-4xl md:text-5xl" /> React
-              </div>
-              <div className="flex items-center gap-2 text-base">
-                <SiRedux className="text-purple-500 text-4xl md:text-5xl" /> Redux
-              </div>
-              <div className="flex items-center gap-2 text-base">
-                <SiTailwindcss className="text-sky-400 text-4xl md:text-5xl" /> Tailwind CSS
-              </div>
-              <div className="flex items-center gap-2 text-base">
-                <SiFramer className="text-violet-400 text-4xl md:text-5xl" /> Framer Motion
-              </div>
-              <div className="flex items-center gap-2 text-base">
-                <SiVite className="text-purple-400 text-4xl md:text-5xl" /> Vite
-              </div>
-              <div className="flex items-center gap-2 text-base">
-                <FaGitAlt className="text-orange-500 text-4xl md:text-5xl" /> Git
-              </div>
+            {/* RIGHT SIDE: INTRODUCTION */}
+            <div className="w-full max-w-none space-y-4 text-base leading-relaxed text-gray-400 sm:text-lg sm:leading-8">
+              <p>
+                I enjoy transforming complex ideas into functional web applications using modern
+                 frontend technologies and Java-based backend development. My technical experience includes
+                  building REST APIs with Java and Spring Boot, implementing JWT authentication and role-based 
+                  access control, integrating real-time communication using WebSockets, and connecting applications with
+                   databases and external APIs. I also work with tools like Docker and Docker Compose to containerize 
+                   applications, while focusing on clean code, maintainable architecture, and reliable application
+                    functionality. My goal is to build scalable, 
+                efficient solutions that combine strong technical foundations with practical user needs.
+              </p>
             </div>
           </div>
         </div>
