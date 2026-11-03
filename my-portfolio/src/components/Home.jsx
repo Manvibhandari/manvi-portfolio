@@ -319,7 +319,7 @@ function Home() {
 
               {/* DOWNLOAD RESUME BUTTON */}
               <a
-                href="/Manvi%20Resume.pdf"
+                href="/Manvi_Resume.pdf"
                 download="Manvi Resume.pdf"
                 className="resume-glow mt-6 inline-flex items-center justify-center rounded-full border border-blue-300/70 bg-green-500 px-6 py-3 text-center font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:bg-green-400 hover:shadow-[0_0_22px_rgba(59,130,246,0.65),0_0_45px_rgba(34,197,94,0.55)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-300 sm:mt-7 sm:px-7 sm:py-3.5"
               >
